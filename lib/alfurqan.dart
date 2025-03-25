@@ -1,17 +1,17 @@
 // ignore_for_file: constant_identifier_names
 
-import 'package:alquran/data/dart/chapter.dart';
-import 'package:alquran/data/dart/juz.dart';
-import 'package:alquran/data/dart/translations/enMASAbdelHaleem.dart';
-import 'package:alquran/data/dart/translations/frMontadaIslamicFoundation.dart';
-import 'package:alquran/data/dart/translations/idIndonesianIslamicAffairsMinistry.dart';
-import 'package:alquran/data/dart/translations/trDarAlSalamCenter.dart';
-import 'package:alquran/data/dart/types.dart';
-import 'package:alquran/data/dart/verses/imlaei.dart';
-import 'package:alquran/data/dart/verses/indopak.dart';
-import 'package:alquran/data/dart/verses/uthmani.dart';
-import 'package:alquran/data/dart/verses/uthmaniTajweed.dart';
-import 'package:alquran/helper.dart';
+import 'package:alfurqan/data/dart/chapter.dart';
+import 'package:alfurqan/data/dart/juz.dart';
+import 'package:alfurqan/data/dart/translations/enMASAbdelHaleem.dart';
+import 'package:alfurqan/data/dart/translations/frMontadaIslamicFoundation.dart';
+import 'package:alfurqan/data/dart/translations/idIndonesianIslamicAffairsMinistry.dart';
+import 'package:alfurqan/data/dart/translations/trDarAlSalamCenter.dart';
+import 'package:alfurqan/data/dart/types.dart';
+import 'package:alfurqan/data/dart/verses/imlaei.dart';
+import 'package:alfurqan/data/dart/verses/indopak.dart';
+import 'package:alfurqan/data/dart/verses/uthmani.dart';
+import 'package:alfurqan/data/dart/verses/uthmaniTajweed.dart';
+import 'package:alfurqan/helper.dart';
 import 'package:collection/collection.dart';
 
 enum VerseMode { indopak, uthmani, uthmaniTajweed, imlaei }

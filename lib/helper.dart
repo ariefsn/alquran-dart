@@ -1,6 +1,6 @@
-import 'package:alquran/data/dart/chapter.dart';
-import 'package:alquran/data/dart/juz.dart';
-import 'package:alquran/data/dart/verses/indopak.dart';
+import 'package:alfurqan/data/dart/chapter.dart';
+import 'package:alfurqan/data/dart/juz.dart';
+import 'package:alfurqan/data/dart/verses/indopak.dart';
 
 bool isOutOfRange(int value, int min, int max) => value < min || value > max;
 

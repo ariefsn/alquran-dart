@@ -33,7 +33,7 @@
 3. And import it
 
     ```dart
-    import 'package:alquran/alquran.dart';
+    import 'package:alfurqan/alfurqan.dart';
     ```
 
 ### Usage

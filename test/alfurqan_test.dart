@@ -1,4 +1,4 @@
-import 'package:alquran/alquran.dart';
+import 'package:alfurqan/alfurqan.dart';
 import 'package:test/test.dart';
 
 void main() {

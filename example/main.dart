@@ -1,4 +1,4 @@
-import 'package:alquran/alquran.dart';
+import 'package:alfurqan/alfurqan.dart';
 
 void main(List<String> args) {
   final basmallah = AlQuran.basmallah;
