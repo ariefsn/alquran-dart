@@ -15,3 +15,6 @@ fix.dry:
 
 fix.apply:
 	dart fix --apply
+
+analyze:
+	dart analyze

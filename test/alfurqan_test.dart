@@ -1,4 +1,5 @@
 import 'package:alfurqan/alfurqan.dart';
+import 'package:alfurqan/constant.dart';
 import 'package:test/test.dart';
 
 void main() {
@@ -30,20 +31,20 @@ void main() {
     });
 
     test('> Get Arabic Number', () {
-      var res = AlQuran.getArabicNumber(123);
+      var res = AlQuran.arabicNumber(123);
       expect(res, '١٢٣');
 
-      res = AlQuran.getArabicNumber(512);
+      res = AlQuran.arabicNumber(512);
       expect(res, '٥١٢');
 
-      res = AlQuran.getArabicNumber(2048);
+      res = AlQuran.arabicNumber(2048);
       expect(res, '٢٠٤٨');
     });
   });
 
   group('AlQuran > JUZ', () {
     test('> Get', () {
-      final res = AlQuran.getJuz(114, 1);
+      final res = AlQuran.juz(114, 1);
       expect(res, isNotNull);
       expect(res?.number, 30);
       expect(res?.verse.count, 564);
@@ -52,7 +53,7 @@ void main() {
 
   group('AlQuran > CHAPTER', () {
     test('> Get', () {
-      final res = AlQuran.getChapter(114);
+      final res = AlQuran.chapter(114);
       expect(res, isNotNull);
       expect(res?.nameSimple, 'An-Nas');
       expect(res?.translatedName["id"], "Umat Manusia");
@@ -62,7 +63,7 @@ void main() {
 
   group('AlQuran > VERSE', () {
     test('> Get', () {
-      final res = AlQuran.getVerse(1, 2);
+      final res = AlQuran.verse(1, 2);
       expect(res, isNotNull);
       expect(res?.chapterID, 1);
       expect(res?.verseKey, '1:2');
@@ -70,7 +71,7 @@ void main() {
     });
 
     test('> Get Translation', () {
-      final res = AlQuran.getTranslation(
+      final res = AlQuran.translation(
           TranslationType.idIndonesianIslamicAffairsMinistry, '1:2');
       expect(res, isNotNull);
       expect(res?.verseKey, '1:2');

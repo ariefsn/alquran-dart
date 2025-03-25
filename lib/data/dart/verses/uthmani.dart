@@ -1,6 +1,6 @@
 import '../types.dart';
 
-List<Verse> verses_UTHMANI = [
+List<Verse> versesUthmani = [
   Verse(
     id: 1,
     verseKey: "1:1",

@@ -1,84 +1,77 @@
-// ignore_for_file: constant_identifier_names
+import 'dart:math';
 
+import 'package:alfurqan/constant.dart';
 import 'package:alfurqan/data/dart/chapter.dart';
 import 'package:alfurqan/data/dart/juz.dart';
-import 'package:alfurqan/data/dart/translations/enMASAbdelHaleem.dart';
-import 'package:alfurqan/data/dart/translations/frMontadaIslamicFoundation.dart';
-import 'package:alfurqan/data/dart/translations/idIndonesianIslamicAffairsMinistry.dart';
-import 'package:alfurqan/data/dart/translations/trDarAlSalamCenter.dart';
 import 'package:alfurqan/data/dart/types.dart';
-import 'package:alfurqan/data/dart/verses/imlaei.dart';
 import 'package:alfurqan/data/dart/verses/indopak.dart';
 import 'package:alfurqan/data/dart/verses/uthmani.dart';
-import 'package:alfurqan/data/dart/verses/uthmaniTajweed.dart';
 import 'package:alfurqan/helper.dart';
 import 'package:collection/collection.dart';
 
-enum VerseMode { indopak, uthmani, uthmaniTajweed, imlaei }
+/// A VerseComplete.
+class VerseComplete {
+  /// The random verse
+  final Verse verse;
 
-enum TranslationType {
-  enMASAbdelHaleem,
-  idIndonesianIslamicAffairsMinistry,
-  frMontadaIslamicFoundation,
-  trDarAlSalamCenter
+  /// The translation of the random verse
+  final VerseTranslation translation;
+
+  /// Create a VerseComplete
+  VerseComplete(this.verse, this.translation);
 }
 
-enum AudioEdition {
-  ar_Abdulbasitmurattal,
-  ar_abdullahbasfar,
-  ar_abdurrahmaansudais,
-  ar_abdulsamad,
-  ar_shaatree,
-  ar_ahmedajamy,
-  ar_alafasy,
-  ar_hanirifai,
-  ar_husary,
-  ar_husarymujawwad,
-  ar_hudhaify,
-  ar_ibrahimakhbar,
-  ar_mahermuaiqly,
-  ar_minshawi,
-  ar_minshawimujawwad,
-  ar_muhammadayyoub,
-  ar_muhammadjibreel,
-  ar_saoodshuraym,
-  en_walk,
-  fa_hedayatfarfooladvand,
-  ar_parhizgar,
-  ur_khan,
-  zh_chinese,
-  fr_leclerc,
-  ar_aymanswoaid;
+/// A SearchResult
+class SearchResult {
+  /// The list of found chapters
+  final List<Chapter> chapters;
+
+  /// The list of found verses with translations
+  final List<VerseComplete> verses;
+
+  /// Create a SearchResult
+  SearchResult(this.chapters, this.verses);
 }
 
 /// A AlQuran.
 class AlQuran {
+  /// Get the basmallah arabic text
   static String get basmallah {
-    return verses_UTHMANI.first.text;
+    return versesUthmani.first.text;
   }
 
+  /// Get the total juz
   static int get totalJuz => juzs.length;
+
+  /// Get the total chapter
   static int get totalChapter => chapters.length;
-  static int get totalVerse => verses_INDOPAK.length;
+
+  /// Get the total verse
+  static int get totalVerse => versesIndopak.length;
+
+  /// Get the total madani surah
   static int get totalMadaniSurah {
     return chapters
         .where((e) => e.revelationPlace == ChapterRevelationPlace.madinah)
         .length;
   }
 
+  /// Get the total makki surah
   static int get totalMakkiSurah {
     return chapters
         .where((e) => e.revelationPlace == ChapterRevelationPlace.makkah)
         .length;
   }
 
-  // JUZ
-  static Juz? getJuz(int chapterNumber, int verseNumber) {
+  /// Get the juz by chapter number and verse number
+  /// <br>If the chapter number or verse number is out of range, it will return null
+  /// <br>The return is a Juz object
+  static Juz? juz(int chapterNumber, int verseNumber) {
     if (isChapterOutOfRange(chapterNumber) || isVerseOutOfRange(verseNumber)) {
       return null;
     }
 
-    final verse = verses_INDOPAK.firstWhereOrNull((e) {
+    final verse = versesIndopak.firstWhereOrNull((e) {
       return e.verseKey == "$chapterNumber:$verseNumber";
     });
 
@@ -89,8 +82,10 @@ class AlQuran {
     return juzs.firstWhereOrNull((e) => e.number == verse.juzNumber);
   }
 
-  // CHAPTER
-  static Chapter? getChapter(int chapterNumber) {
+  /// Get the chapter by chapter number
+  /// <br>If the chapter number is out of range, it will return null
+  /// <br>The return is a Chapter object
+  static Chapter? chapter(int chapterNumber) {
     if (isChapterOutOfRange(chapterNumber)) {
       return null;
     }
@@ -98,8 +93,11 @@ class AlQuran {
     return chapters.firstWhereOrNull((e) => e.id == chapterNumber);
   }
 
-  // VERSE
-  static Verse? getVerse(
+  /// Get the verse by chapter number and verse number
+  /// <br>If the chapter number or verse number is out of range, it will return null
+  /// <br>Support to change verse mode
+  /// <br>The return is a Verse object
+  static Verse? verse(
     int chapterNumber,
     int verseNumber, {
     VerseMode mode = VerseMode.indopak,
@@ -108,46 +106,23 @@ class AlQuran {
       return null;
     }
 
-    List<Verse> verses;
-    switch (mode) {
-      case VerseMode.indopak:
-        verses = verses_INDOPAK;
-        break;
-      case VerseMode.uthmani:
-        verses = verses_UTHMANI;
-        break;
-      case VerseMode.uthmaniTajweed:
-        verses = verses_UTHMANITAJWEED;
-        break;
-      case VerseMode.imlaei:
-        verses = verses_IMLAEI;
-        break;
-    }
+    final verses = getVerses(mode: mode);
 
     return verses
         .firstWhereOrNull((e) => e.verseKey == "$chapterNumber:$verseNumber");
   }
 
-  // TRANSLATION
-  static VerseTranslation? getTranslation(
-      TranslationType type, String verseKey) {
-    switch (type) {
-      case TranslationType.enMASAbdelHaleem:
-        return enMASAbdelHaleem.firstWhereOrNull((e) => e.verseKey == verseKey);
-      case TranslationType.idIndonesianIslamicAffairsMinistry:
-        return idIndonesianIslamicAffairsMinistry
-            .firstWhereOrNull((e) => e.verseKey == verseKey);
-      case TranslationType.frMontadaIslamicFoundation:
-        return frMontadaIslamicFoundation
-            .firstWhereOrNull((e) => e.verseKey == verseKey);
-      case TranslationType.trDarAlSalamCenter:
-        return trDarAlSalamCenter
-            .firstWhereOrNull((e) => e.verseKey == verseKey);
-    }
+  /// Get the translation by type and verse key
+  /// <br>If the type or verse key is not exists, it will return null
+  /// <br>The return is a VerseTranslation object
+  static VerseTranslation? translation(TranslationType type, String verseKey) {
+    final translations = getTranslations(type: type);
+
+    return translations.firstWhereOrNull((e) => e.verseKey == verseKey);
   }
 
-  // Arabic Number
-  static String getArabicNumber(int number) {
+  /// Get the arabic number
+  static String arabicNumber(int number) {
     final numberStr = number.toString();
 
     return numberStr
@@ -156,8 +131,11 @@ class AlQuran {
         .join("");
   }
 
-  // Audio URL by Chapter
-  static String getAudioURLByChapter(int chapterNumber,
+  /// Get the audio URL by chapter number
+  /// <br>If the chapter number is out of range, it will return empty
+  /// <br>The return is a String
+  /// <br>Support to change audio edition
+  static String audioURLByChapter(int chapterNumber,
       {AudioEdition edition = AudioEdition.ar_alafasy}) {
     if (isChapterOutOfRange(chapterNumber)) {
       return "";
@@ -168,8 +146,11 @@ class AlQuran {
     return "https://cdn.islamic.network/quran/audio-surah/128/$editionParsed/$chapterNumber.mp3";
   }
 
-  // Audio URL by Verse
-  static String getAudioURLByVerse(int verseNumber,
+  /// Get the audio URL by verse number
+  /// <br>If the verse number is out of range, it will return empty
+  /// <br>The return is a String
+  /// <br>Support to change audio edition
+  static String audioURLByVerse(int verseNumber,
       {AudioEdition edition = AudioEdition.ar_alafasy}) {
     if (isVerseOutOfRange(verseNumber)) {
       return "";
@@ -180,14 +161,80 @@ class AlQuran {
     return "https://cdn.islamic.network/quran/audio/128/$editionParsed/$verseNumber.mp3";
   }
 
-  // Image URL of Verse
-  static String getImageURLByVerse(String verseKey,
-      {bool highQuality = false}) {
+  /// Get the image URL by verse key
+  /// <br>The return is a String
+  /// <br>Support to change image quality
+  static String imageURLByVerse(String verseKey, {bool highQuality = false}) {
     final verseID = verseKey.replaceAll(':', '_');
     if (highQuality) {
       return "https://cdn.islamic.network/quran/images/high-resolution/$verseID.png";
     }
 
     return "https://cdn.islamic.network/quran/images/$verseID.png";
+  }
+
+  /// Get a random verse
+  /// <br>The return is a VerseComplete object
+  /// <br>Support to change verse mode
+  static VerseComplete? randomVerse({
+    VerseMode mode = VerseMode.indopak,
+    TranslationType translationType = TranslationType.enMASAbdelHaleem,
+  }) {
+    final rnd = Random();
+    final verses = getVerses(mode: mode);
+    final nextIndex = rnd.nextInt(verses.length) + 1;
+    final verse = verses.elementAtOrNull(nextIndex);
+    if (verse == null) {
+      return randomVerse(mode: mode, translationType: translationType);
+    }
+    final trans = translation(translationType, verse.verseKey);
+    if (trans == null) {
+      return randomVerse(mode: mode, translationType: translationType);
+    }
+
+    return VerseComplete(verse, trans);
+  }
+
+  /// Search by keyword and translation type
+  /// <br>Support to change verse mode
+  /// <br>The return is a SearchResult object
+  static SearchResult search(
+    String keyword,
+    TranslationType translationType, {
+    VerseMode verseMode = VerseMode.indopak,
+  }) {
+    final keywordLower = keyword.toLowerCase();
+    final verses = getVerses(mode: verseMode);
+    final trans = getTranslations(type: translationType);
+    final chapterFound = chapters.where((e) {
+      final names = [
+        e.nameArabic,
+        e.nameSimple.toLowerCase(),
+        e.nameComplex.toLowerCase(),
+        e.nameSimple.toLowerCase().replaceAll('-', ''),
+      ].any((e) => e.contains(keywordLower));
+
+      final translated = e.translatedName[translationType.languageCode]
+              ?.toLowerCase()
+              .contains(keywordLower) ??
+          false;
+
+      return names || translated;
+    }).toList();
+
+    final transFound = trans.where((e) {
+      return e.text.toLowerCase().contains(keywordLower);
+    });
+
+    return SearchResult(
+        chapterFound,
+        transFound
+            .map(
+              (e) => VerseComplete(
+                verses.firstWhere((v) => e.verseKey == v.verseKey),
+                e,
+              ),
+            )
+            .toList());
   }
 }

@@ -1,4 +1,5 @@
 import 'package:alfurqan/alfurqan.dart';
+import 'package:alfurqan/constant.dart';
 
 void main(List<String> args) {
   final basmallah = AlQuran.basmallah;
@@ -19,7 +20,7 @@ void main(List<String> args) {
   final totalVerse = AlQuran.totalVerse;
   print(totalVerse); // 6236
 
-  final juz = AlQuran.getJuz(1, 1);
+  final juz = AlQuran.juz(1, 1);
   print(juz);
   // Juz(
   //   verse: JuzVerse(
@@ -35,7 +36,7 @@ void main(List<String> args) {
   //   number: 1
   // )
 
-  final chapter = AlQuran.getChapter(1);
+  final chapter = AlQuran.chapter(1);
   print(chapter);
   // Chapter(
   //   id: 1,
@@ -56,7 +57,7 @@ void main(List<String> args) {
   //   versesCount: 7
   // )
 
-  final verse = AlQuran.getVerse(1, 1);
+  final verse = AlQuran.verse(1, 1);
   print(verse);
   // Verse(
   //   id: 1,
@@ -67,7 +68,7 @@ void main(List<String> args) {
   //   juzNumber: 1
   // );
 
-  final verseWithMode = AlQuran.getVerse(
+  final verseWithMode = AlQuran.verse(
     1,
     1,
     mode: VerseMode.uthmani,
@@ -82,7 +83,7 @@ void main(List<String> args) {
   //   juzNumber: 1,
   // )
 
-  final translation = AlQuran.getTranslation(
+  final translation = AlQuran.translation(
       TranslationType.idIndonesianIslamicAffairsMinistry, "1:1");
   print(translation);
   // VerseTranslation(
@@ -93,34 +94,61 @@ void main(List<String> args) {
   //   languageName: "indonesian"
   // )
 
-  final chapterAudio = AlQuran.getAudioURLByChapter(1);
+  final chapterAudio = AlQuran.audioURLByChapter(1);
   print(
       chapterAudio); // https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/1.mp3
 
   // With Edition
-  final chapterAudioWithEdition = AlQuran.getAudioURLByChapter(
+  final chapterAudioWithEdition = AlQuran.audioURLByChapter(
     1,
     edition: AudioEdition.ar_husary,
   );
   print(
       chapterAudioWithEdition); // https://cdn.islamic.network/quran/audio-surah/128/ar.husary/1.mp3
 
-  final verseAudio = AlQuran.getAudioURLByVerse(1);
+  final verseAudio = AlQuran.audioURLByVerse(1);
   print(
       verseAudio); // https://cdn.islamic.network/quran/audio/128/ar.alafasy/1.mp3
 
   // With Edition
   final verseAudioWithEdition =
-      AlQuran.getAudioURLByVerse(1, edition: AudioEdition.ar_husary);
+      AlQuran.audioURLByVerse(1, edition: AudioEdition.ar_husary);
   print(
       verseAudioWithEdition); // https://cdn.islamic.network/quran/audio/128/ar.husary/1.mp3
 
-  final imageUrl = AlQuran.getImageURLByVerse("1:1");
+  final imageUrl = AlQuran.imageURLByVerse("1:1");
   print(imageUrl); // https://cdn.islamic.network/quran/images/1_1.png
 
   // With high quality
-  final imageUrlHighQuality =
-      AlQuran.getImageURLByVerse("1:1", highQuality: true);
+  final imageUrlHighQuality = AlQuran.imageURLByVerse("1:1", highQuality: true);
   print(
       imageUrlHighQuality); // https://cdn.islamic.network/quran/images/high-resolution/1_1.png
+
+  final randomVerse = AlQuran.randomVerse();
+  print("""
+    RandomVerse
+    Verse: ${randomVerse?.verse.toJson()}
+    Trans: ${randomVerse?.translation.toJson()}
+  """);
+
+  final randomVerseWithMode = AlQuran.randomVerse(
+    mode: VerseMode.uthmani,
+    translationType: TranslationType.idIndonesianIslamicAffairsMinistry,
+  );
+  print("""
+    RandomVerseWithMode
+    Verse: ${randomVerseWithMode?.verse.toJson()}
+    Trans: ${randomVerseWithMode?.translation.toJson()}
+  """);
+
+  final searchResult = AlQuran.search(
+    'yasin',
+    TranslationType.idIndonesianIslamicAffairsMinistry,
+  );
+
+  print("""
+    SearchResult
+    Chapters: ${searchResult.chapters}
+    Verses: ${searchResult.verses}
+  """);
 }

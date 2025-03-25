@@ -2,3 +2,13 @@ include: package:flutter_lints/flutter.yaml
 
 # Additional information about this file can be found at
 # https://dart.dev/guides/language/analysis-options
+
+analyzer:
+  exclude:
+    - lib/data/**
+  errors:
+    avoid_print: ignore
+
+linter:
+  rules:
+    public_member_api_docs: true
