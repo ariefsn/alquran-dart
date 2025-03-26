@@ -6,7 +6,10 @@ List<Chapter> chapters = [
     nameArabic: "الفاتحة",
     nameComplex: "Al-Fātiĥah",
     nameSimple: "Al-Fatihah",
-    pages: [1,1,],
+    pages: [
+      1,
+      1,
+    ],
     revelationOrder: 5,
     translatedName: {
       "id": "Pembukaan",
@@ -23,7 +26,10 @@ List<Chapter> chapters = [
     nameArabic: "البقرة",
     nameComplex: "Al-Baqarah",
     nameSimple: "Al-Baqarah",
-    pages: [2,49,],
+    pages: [
+      2,
+      49,
+    ],
     revelationOrder: 87,
     revelationPlace: ChapterRevelationPlace.madinah,
     translatedName: {
@@ -41,7 +47,10 @@ List<Chapter> chapters = [
     nameArabic: "آل عمران",
     nameComplex: "Āli `Imrān",
     nameSimple: "Ali &#39;Imran",
-    pages: [50,76,],
+    pages: [
+      50,
+      76,
+    ],
     revelationOrder: 89,
     revelationPlace: ChapterRevelationPlace.madinah,
     translatedName: {
@@ -59,7 +68,10 @@ List<Chapter> chapters = [
     nameArabic: "النساء",
     nameComplex: "An-Nisā",
     nameSimple: "An-Nisa",
-    pages: [77,106,],
+    pages: [
+      77,
+      106,
+    ],
     revelationOrder: 92,
     revelationPlace: ChapterRevelationPlace.madinah,
     translatedName: {
@@ -77,7 +89,10 @@ List<Chapter> chapters = [
     nameArabic: "المائدة",
     nameComplex: "Al-Mā&#39;idah",
     nameSimple: "Al-Ma&#39;idah",
-    pages: [106,127,],
+    pages: [
+      106,
+      127,
+    ],
     revelationOrder: 112,
     revelationPlace: ChapterRevelationPlace.madinah,
     translatedName: {
@@ -95,7 +110,10 @@ List<Chapter> chapters = [
     nameArabic: "الأنعام",
     nameComplex: "Al-&#39;An`ām",
     nameSimple: "Al-An&#39;am",
-    pages: [128,150,],
+    pages: [
+      128,
+      150,
+    ],
     revelationOrder: 55,
     translatedName: {
       "id": "Binatang Ternak",
@@ -112,7 +130,10 @@ List<Chapter> chapters = [
     nameArabic: "الأعراف",
     nameComplex: "Al-&#39;A`rāf",
     nameSimple: "Al-A&#39;raf",
-    pages: [151,176,],
+    pages: [
+      151,
+      176,
+    ],
     revelationOrder: 39,
     translatedName: {
       "id": "Tempat-tempat Tinggi",
@@ -129,7 +150,10 @@ List<Chapter> chapters = [
     nameArabic: "الأنفال",
     nameComplex: "Al-&#39;Anfāl",
     nameSimple: "Al-Anfal",
-    pages: [177,186,],
+    pages: [
+      177,
+      186,
+    ],
     revelationOrder: 88,
     revelationPlace: ChapterRevelationPlace.madinah,
     translatedName: {
@@ -146,7 +170,10 @@ List<Chapter> chapters = [
     nameArabic: "التوبة",
     nameComplex: "At-Tawbah",
     nameSimple: "At-Tawbah",
-    pages: [187,207,],
+    pages: [
+      187,
+      207,
+    ],
     revelationOrder: 113,
     revelationPlace: ChapterRevelationPlace.madinah,
     translatedName: {
@@ -164,7 +191,10 @@ List<Chapter> chapters = [
     nameArabic: "يونس",
     nameComplex: "Yūnus",
     nameSimple: "Yunus",
-    pages: [208,221,],
+    pages: [
+      208,
+      221,
+    ],
     revelationOrder: 51,
     translatedName: {
       "id": "Yunus",
@@ -181,7 +211,10 @@ List<Chapter> chapters = [
     nameArabic: "هود",
     nameComplex: "Hūd",
     nameSimple: "Hud",
-    pages: [221,235,],
+    pages: [
+      221,
+      235,
+    ],
     revelationOrder: 52,
     translatedName: {
       "id": "Hud",
@@ -198,7 +231,10 @@ List<Chapter> chapters = [
     nameArabic: "يوسف",
     nameComplex: "Yūsuf",
     nameSimple: "Yusuf",
-    pages: [235,248,],
+    pages: [
+      235,
+      248,
+    ],
     revelationOrder: 53,
     translatedName: {
       "id": "Yusuf",
@@ -215,7 +251,10 @@ List<Chapter> chapters = [
     nameArabic: "الرعد",
     nameComplex: "Ar-Ra`d",
     nameSimple: "Ar-Ra&#39;d",
-    pages: [249,255,],
+    pages: [
+      249,
+      255,
+    ],
     revelationOrder: 96,
     revelationPlace: ChapterRevelationPlace.madinah,
     translatedName: {
@@ -233,7 +272,10 @@ List<Chapter> chapters = [
     nameArabic: "ابراهيم",
     nameComplex: "Ibrāhīm",
     nameSimple: "Ibrahim",
-    pages: [255,261,],
+    pages: [
+      255,
+      261,
+    ],
     revelationOrder: 72,
     translatedName: {
       "id": "Ibrahim",
@@ -250,7 +292,10 @@ List<Chapter> chapters = [
     nameArabic: "الحجر",
     nameComplex: "Al-Ĥijr",
     nameSimple: "Al-Hijr",
-    pages: [262,267,],
+    pages: [
+      262,
+      267,
+    ],
     revelationOrder: 54,
     translatedName: {
       "id": "Bukit",
@@ -267,7 +312,10 @@ List<Chapter> chapters = [
     nameArabic: "النحل",
     nameComplex: "An-Naĥl",
     nameSimple: "An-Nahl",
-    pages: [267,281,],
+    pages: [
+      267,
+      281,
+    ],
     revelationOrder: 70,
     translatedName: {
       "id": "Lebah Madu",
@@ -284,7 +332,10 @@ List<Chapter> chapters = [
     nameArabic: "الإسراء",
     nameComplex: "Al-&#39;Isrā",
     nameSimple: "Al-Isra",
-    pages: [282,293,],
+    pages: [
+      282,
+      293,
+    ],
     revelationOrder: 50,
     translatedName: {
       "id": "Perjalanan Malam",
@@ -301,7 +352,10 @@ List<Chapter> chapters = [
     nameArabic: "الكهف",
     nameComplex: "Al-Kahf",
     nameSimple: "Al-Kahf",
-    pages: [293,304,],
+    pages: [
+      293,
+      304,
+    ],
     revelationOrder: 69,
     translatedName: {
       "id": "Para Penghuni Gua",
@@ -318,7 +372,10 @@ List<Chapter> chapters = [
     nameArabic: "مريم",
     nameComplex: "Maryam",
     nameSimple: "Maryam",
-    pages: [305,312,],
+    pages: [
+      305,
+      312,
+    ],
     revelationOrder: 44,
     translatedName: {
       "id": "Maryam",
@@ -335,7 +392,10 @@ List<Chapter> chapters = [
     nameArabic: "طه",
     nameComplex: "Ţāhā",
     nameSimple: "Taha",
-    pages: [312,321,],
+    pages: [
+      312,
+      321,
+    ],
     revelationOrder: 45,
     translatedName: {
       "id": "Tha-Ha",
@@ -352,7 +412,10 @@ List<Chapter> chapters = [
     nameArabic: "الأنبياء",
     nameComplex: "Al-&#39;Anbyā",
     nameSimple: "Al-Anbya",
-    pages: [322,331,],
+    pages: [
+      322,
+      331,
+    ],
     revelationOrder: 73,
     translatedName: {
       "id": "Para Nabi",
@@ -369,7 +432,10 @@ List<Chapter> chapters = [
     nameArabic: "الحج",
     nameComplex: "Al-Ĥajj",
     nameSimple: "Al-Hajj",
-    pages: [332,341,],
+    pages: [
+      332,
+      341,
+    ],
     revelationOrder: 103,
     revelationPlace: ChapterRevelationPlace.madinah,
     translatedName: {
@@ -387,7 +453,10 @@ List<Chapter> chapters = [
     nameArabic: "المؤمنون",
     nameComplex: "Al-Mu&#39;minūn",
     nameSimple: "Al-Mu&#39;minun",
-    pages: [342,349,],
+    pages: [
+      342,
+      349,
+    ],
     revelationOrder: 74,
     translatedName: {
       "id": "Orang-orang Mukmin",
@@ -404,7 +473,10 @@ List<Chapter> chapters = [
     nameArabic: "النور",
     nameComplex: "An-Nūr",
     nameSimple: "An-Nur",
-    pages: [350,359,],
+    pages: [
+      350,
+      359,
+    ],
     revelationOrder: 102,
     revelationPlace: ChapterRevelationPlace.madinah,
     translatedName: {
@@ -422,7 +494,10 @@ List<Chapter> chapters = [
     nameArabic: "الفرقان",
     nameComplex: "Al-Furqān",
     nameSimple: "Al-Furqan",
-    pages: [359,366,],
+    pages: [
+      359,
+      366,
+    ],
     revelationOrder: 42,
     translatedName: {
       "id": "Pembeda",
@@ -439,7 +514,10 @@ List<Chapter> chapters = [
     nameArabic: "الشعراء",
     nameComplex: "Ash-Shu`arā",
     nameSimple: "Ash-Shu&#39;ara",
-    pages: [367,376,],
+    pages: [
+      367,
+      376,
+    ],
     revelationOrder: 47,
     translatedName: {
       "id": "Penyair",
@@ -456,7 +534,10 @@ List<Chapter> chapters = [
     nameArabic: "النمل",
     nameComplex: "An-Naml",
     nameSimple: "An-Naml",
-    pages: [377,385,],
+    pages: [
+      377,
+      385,
+    ],
     revelationOrder: 48,
     translatedName: {
       "id": "Semut",
@@ -473,7 +554,10 @@ List<Chapter> chapters = [
     nameArabic: "القصص",
     nameComplex: "Al-Qaşaş",
     nameSimple: "Al-Qasas",
-    pages: [385,396,],
+    pages: [
+      385,
+      396,
+    ],
     revelationOrder: 49,
     translatedName: {
       "id": "Kisah-kisah",
@@ -490,7 +574,10 @@ List<Chapter> chapters = [
     nameArabic: "العنكبوت",
     nameComplex: "Al-`Ankabūt",
     nameSimple: "Al-&#39;Ankabut",
-    pages: [396,404,],
+    pages: [
+      396,
+      404,
+    ],
     revelationOrder: 85,
     translatedName: {
       "id": "Laba-laba",
@@ -507,7 +594,10 @@ List<Chapter> chapters = [
     nameArabic: "الروم",
     nameComplex: "Ar-Rūm",
     nameSimple: "Ar-Rum",
-    pages: [404,410,],
+    pages: [
+      404,
+      410,
+    ],
     revelationOrder: 84,
     translatedName: {
       "id": "Bangsa Romawi",
@@ -524,7 +614,10 @@ List<Chapter> chapters = [
     nameArabic: "لقمان",
     nameComplex: "Luqmān",
     nameSimple: "Luqman",
-    pages: [411,414,],
+    pages: [
+      411,
+      414,
+    ],
     revelationOrder: 57,
     translatedName: {
       "id": "Luqman",
@@ -541,7 +634,10 @@ List<Chapter> chapters = [
     nameArabic: "السجدة",
     nameComplex: "As-Sajdah",
     nameSimple: "As-Sajdah",
-    pages: [415,417,],
+    pages: [
+      415,
+      417,
+    ],
     revelationOrder: 75,
     translatedName: {
       "id": "Sujud",
@@ -558,7 +654,10 @@ List<Chapter> chapters = [
     nameArabic: "الأحزاب",
     nameComplex: "Al-&#39;Aĥzāb",
     nameSimple: "Al-Ahzab",
-    pages: [418,427,],
+    pages: [
+      418,
+      427,
+    ],
     revelationOrder: 90,
     revelationPlace: ChapterRevelationPlace.madinah,
     translatedName: {
@@ -576,7 +675,10 @@ List<Chapter> chapters = [
     nameArabic: "سبإ",
     nameComplex: "Saba",
     nameSimple: "Saba",
-    pages: [428,434,],
+    pages: [
+      428,
+      434,
+    ],
     revelationOrder: 58,
     translatedName: {
       "id": "Saba&#39;",
@@ -593,7 +695,10 @@ List<Chapter> chapters = [
     nameArabic: "فاطر",
     nameComplex: "Fāţir",
     nameSimple: "Fatir",
-    pages: [434,440,],
+    pages: [
+      434,
+      440,
+    ],
     revelationOrder: 43,
     translatedName: {
       "id": "Pencipta",
@@ -610,7 +715,10 @@ List<Chapter> chapters = [
     nameArabic: "يس",
     nameComplex: "Yā-Sīn",
     nameSimple: "Ya-Sin",
-    pages: [440,445,],
+    pages: [
+      440,
+      445,
+    ],
     revelationOrder: 41,
     translatedName: {
       "id": "Yas Sin",
@@ -627,7 +735,10 @@ List<Chapter> chapters = [
     nameArabic: "الصافات",
     nameComplex: "Aş-Şāffāt",
     nameSimple: "As-Saffat",
-    pages: [446,452,],
+    pages: [
+      446,
+      452,
+    ],
     revelationOrder: 56,
     translatedName: {
       "id": "Barisan-barisan",
@@ -644,7 +755,10 @@ List<Chapter> chapters = [
     nameArabic: "ص",
     nameComplex: "Şād",
     nameSimple: "Sad",
-    pages: [453,458,],
+    pages: [
+      453,
+      458,
+    ],
     revelationOrder: 38,
     translatedName: {
       "id": "Shad",
@@ -661,7 +775,10 @@ List<Chapter> chapters = [
     nameArabic: "الزمر",
     nameComplex: "Az-Zumar",
     nameSimple: "Az-Zumar",
-    pages: [458,467,],
+    pages: [
+      458,
+      467,
+    ],
     revelationOrder: 59,
     translatedName: {
       "id": "Para Rombongan",
@@ -678,7 +795,10 @@ List<Chapter> chapters = [
     nameArabic: "غافر",
     nameComplex: "Ghāfir",
     nameSimple: "Ghafir",
-    pages: [467,476,],
+    pages: [
+      467,
+      476,
+    ],
     revelationOrder: 60,
     translatedName: {
       "id": "Sang Maha Pengampun",
@@ -695,7 +815,10 @@ List<Chapter> chapters = [
     nameArabic: "فصلت",
     nameComplex: "Fuşşilat",
     nameSimple: "Fussilat",
-    pages: [477,482,],
+    pages: [
+      477,
+      482,
+    ],
     revelationOrder: 61,
     translatedName: {
       "id": "Yang Dijelaskan",
@@ -712,7 +835,10 @@ List<Chapter> chapters = [
     nameArabic: "الشورى",
     nameComplex: "Ash-Shūraá",
     nameSimple: "Ash-Shuraa",
-    pages: [483,489,],
+    pages: [
+      483,
+      489,
+    ],
     revelationOrder: 62,
     translatedName: {
       "id": "Musyawarah",
@@ -729,7 +855,10 @@ List<Chapter> chapters = [
     nameArabic: "الزخرف",
     nameComplex: "Az-Zukhruf",
     nameSimple: "Az-Zukhruf",
-    pages: [489,495,],
+    pages: [
+      489,
+      495,
+    ],
     revelationOrder: 63,
     translatedName: {
       "id": "Perhiasan",
@@ -746,7 +875,10 @@ List<Chapter> chapters = [
     nameArabic: "الدخان",
     nameComplex: "Ad-Dukhān",
     nameSimple: "Ad-Dukhan",
-    pages: [496,498,],
+    pages: [
+      496,
+      498,
+    ],
     revelationOrder: 64,
     translatedName: {
       "id": "Kabut",
@@ -763,7 +895,10 @@ List<Chapter> chapters = [
     nameArabic: "الجاثية",
     nameComplex: "Al-Jāthiyah",
     nameSimple: "Al-Jathiyah",
-    pages: [499,502,],
+    pages: [
+      499,
+      502,
+    ],
     revelationOrder: 65,
     translatedName: {
       "id": "Yang Bertekuk Lutut",
@@ -780,7 +915,10 @@ List<Chapter> chapters = [
     nameArabic: "الأحقاف",
     nameComplex: "Al-&#39;Aĥqāf",
     nameSimple: "Al-Ahqaf",
-    pages: [502,506,],
+    pages: [
+      502,
+      506,
+    ],
     revelationOrder: 66,
     translatedName: {
       "id": "Bukit-bukir Pasir",
@@ -797,7 +935,10 @@ List<Chapter> chapters = [
     nameArabic: "محمد",
     nameComplex: "Muĥammad",
     nameSimple: "Muhammad",
-    pages: [507,510,],
+    pages: [
+      507,
+      510,
+    ],
     revelationOrder: 95,
     revelationPlace: ChapterRevelationPlace.madinah,
     translatedName: {
@@ -815,7 +956,10 @@ List<Chapter> chapters = [
     nameArabic: "الفتح",
     nameComplex: "Al-Fatĥ",
     nameSimple: "Al-Fath",
-    pages: [511,515,],
+    pages: [
+      511,
+      515,
+    ],
     revelationOrder: 111,
     revelationPlace: ChapterRevelationPlace.madinah,
     translatedName: {
@@ -833,7 +977,10 @@ List<Chapter> chapters = [
     nameArabic: "الحجرات",
     nameComplex: "Al-Ĥujurāt",
     nameSimple: "Al-Hujurat",
-    pages: [515,517,],
+    pages: [
+      515,
+      517,
+    ],
     revelationOrder: 106,
     revelationPlace: ChapterRevelationPlace.madinah,
     translatedName: {
@@ -851,7 +998,10 @@ List<Chapter> chapters = [
     nameArabic: "ق",
     nameComplex: "Qāf",
     nameSimple: "Qaf",
-    pages: [518,520,],
+    pages: [
+      518,
+      520,
+    ],
     revelationOrder: 34,
     translatedName: {
       "id": "Qaf",
@@ -868,7 +1018,10 @@ List<Chapter> chapters = [
     nameArabic: "الذاريات",
     nameComplex: "Adh-Dhāriyāt",
     nameSimple: "Adh-Dhariyat",
-    pages: [520,523,],
+    pages: [
+      520,
+      523,
+    ],
     revelationOrder: 67,
     translatedName: {
       "id": "Angin yang Menerbangkan",
@@ -885,7 +1038,10 @@ List<Chapter> chapters = [
     nameArabic: "الطور",
     nameComplex: "Aţ-Ţūr",
     nameSimple: "At-Tur",
-    pages: [523,525,],
+    pages: [
+      523,
+      525,
+    ],
     revelationOrder: 76,
     translatedName: {
       "id": "Bukit",
@@ -902,7 +1058,10 @@ List<Chapter> chapters = [
     nameArabic: "النجم",
     nameComplex: "An-Najm",
     nameSimple: "An-Najm",
-    pages: [526,528,],
+    pages: [
+      526,
+      528,
+    ],
     revelationOrder: 23,
     translatedName: {
       "id": "Bintang",
@@ -919,7 +1078,10 @@ List<Chapter> chapters = [
     nameArabic: "القمر",
     nameComplex: "Al-Qamar",
     nameSimple: "Al-Qamar",
-    pages: [528,531,],
+    pages: [
+      528,
+      531,
+    ],
     revelationOrder: 37,
     translatedName: {
       "id": "Bulan",
@@ -936,7 +1098,10 @@ List<Chapter> chapters = [
     nameArabic: "الرحمن",
     nameComplex: "Ar-Raĥmān",
     nameSimple: "Ar-Rahman",
-    pages: [531,534,],
+    pages: [
+      531,
+      534,
+    ],
     revelationOrder: 97,
     revelationPlace: ChapterRevelationPlace.madinah,
     translatedName: {
@@ -954,7 +1119,10 @@ List<Chapter> chapters = [
     nameArabic: "الواقعة",
     nameComplex: "Al-Wāqi`ah",
     nameSimple: "Al-Waqi&#39;ah",
-    pages: [534,537,],
+    pages: [
+      534,
+      537,
+    ],
     revelationOrder: 46,
     translatedName: {
       "id": "Hari Kiamat",
@@ -971,7 +1139,10 @@ List<Chapter> chapters = [
     nameArabic: "الحديد",
     nameComplex: "Al-Ĥadīd",
     nameSimple: "Al-Hadid",
-    pages: [537,541,],
+    pages: [
+      537,
+      541,
+    ],
     revelationOrder: 94,
     revelationPlace: ChapterRevelationPlace.madinah,
     translatedName: {
@@ -989,7 +1160,10 @@ List<Chapter> chapters = [
     nameArabic: "المجادلة",
     nameComplex: "Al-Mujādila",
     nameSimple: "Al-Mujadila",
-    pages: [542,545,],
+    pages: [
+      542,
+      545,
+    ],
     revelationOrder: 105,
     revelationPlace: ChapterRevelationPlace.madinah,
     translatedName: {
@@ -1007,7 +1181,10 @@ List<Chapter> chapters = [
     nameArabic: "الحشر",
     nameComplex: "Al-Ĥashr",
     nameSimple: "Al-Hashr",
-    pages: [545,548,],
+    pages: [
+      545,
+      548,
+    ],
     revelationOrder: 101,
     revelationPlace: ChapterRevelationPlace.madinah,
     translatedName: {
@@ -1025,7 +1202,10 @@ List<Chapter> chapters = [
     nameArabic: "الممتحنة",
     nameComplex: "Al-Mumtaĥanah",
     nameSimple: "Al-Mumtahanah",
-    pages: [549,551,],
+    pages: [
+      549,
+      551,
+    ],
     revelationOrder: 91,
     revelationPlace: ChapterRevelationPlace.madinah,
     translatedName: {
@@ -1043,7 +1223,10 @@ List<Chapter> chapters = [
     nameArabic: "الصف",
     nameComplex: "Aş-Şaf",
     nameSimple: "As-Saf",
-    pages: [551,552,],
+    pages: [
+      551,
+      552,
+    ],
     revelationOrder: 109,
     revelationPlace: ChapterRevelationPlace.madinah,
     translatedName: {
@@ -1061,7 +1244,10 @@ List<Chapter> chapters = [
     nameArabic: "الجمعة",
     nameComplex: "Al-Jumu`ah",
     nameSimple: "Al-Jumu&#39;ah",
-    pages: [553,554,],
+    pages: [
+      553,
+      554,
+    ],
     revelationOrder: 110,
     revelationPlace: ChapterRevelationPlace.madinah,
     translatedName: {
@@ -1079,7 +1265,10 @@ List<Chapter> chapters = [
     nameArabic: "المنافقون",
     nameComplex: "Al-Munāfiqūn",
     nameSimple: "Al-Munafiqun",
-    pages: [554,555,],
+    pages: [
+      554,
+      555,
+    ],
     revelationOrder: 104,
     revelationPlace: ChapterRevelationPlace.madinah,
     translatedName: {
@@ -1097,7 +1286,10 @@ List<Chapter> chapters = [
     nameArabic: "التغابن",
     nameComplex: "At-Taghābun",
     nameSimple: "At-Taghabun",
-    pages: [556,557,],
+    pages: [
+      556,
+      557,
+    ],
     revelationOrder: 108,
     revelationPlace: ChapterRevelationPlace.madinah,
     translatedName: {
@@ -1115,7 +1307,10 @@ List<Chapter> chapters = [
     nameArabic: "الطلاق",
     nameComplex: "Aţ-Ţalāq",
     nameSimple: "At-Talaq",
-    pages: [558,559,],
+    pages: [
+      558,
+      559,
+    ],
     revelationOrder: 99,
     revelationPlace: ChapterRevelationPlace.madinah,
     translatedName: {
@@ -1133,7 +1328,10 @@ List<Chapter> chapters = [
     nameArabic: "التحريم",
     nameComplex: "At-Taĥrīm",
     nameSimple: "At-Tahrim",
-    pages: [560,561,],
+    pages: [
+      560,
+      561,
+    ],
     revelationOrder: 107,
     revelationPlace: ChapterRevelationPlace.madinah,
     translatedName: {
@@ -1151,7 +1349,10 @@ List<Chapter> chapters = [
     nameArabic: "الملك",
     nameComplex: "Al-Mulk",
     nameSimple: "Al-Mulk",
-    pages: [562,564,],
+    pages: [
+      562,
+      564,
+    ],
     revelationOrder: 77,
     translatedName: {
       "id": "Kerajaan",
@@ -1168,7 +1369,10 @@ List<Chapter> chapters = [
     nameArabic: "القلم",
     nameComplex: "Al-Qalam",
     nameSimple: "Al-Qalam",
-    pages: [564,566,],
+    pages: [
+      564,
+      566,
+    ],
     revelationOrder: 2,
     translatedName: {
       "id": "Pena",
@@ -1185,7 +1389,10 @@ List<Chapter> chapters = [
     nameArabic: "الحاقة",
     nameComplex: "Al-Ĥāqqah",
     nameSimple: "Al-Haqqah",
-    pages: [566,568,],
+    pages: [
+      566,
+      568,
+    ],
     revelationOrder: 78,
     translatedName: {
       "id": "Kenyataan (Hari Kiamat)",
@@ -1202,7 +1409,10 @@ List<Chapter> chapters = [
     nameArabic: "المعارج",
     nameComplex: "Al-Ma`ārij",
     nameSimple: "Al-Ma&#39;arij",
-    pages: [568,570,],
+    pages: [
+      568,
+      570,
+    ],
     revelationOrder: 79,
     translatedName: {
       "id": "Tempat yang Naik",
@@ -1219,7 +1429,10 @@ List<Chapter> chapters = [
     nameArabic: "نوح",
     nameComplex: "Nūĥ",
     nameSimple: "Nuh",
-    pages: [570,571,],
+    pages: [
+      570,
+      571,
+    ],
     revelationOrder: 71,
     translatedName: {
       "id": "Nuh",
@@ -1236,7 +1449,10 @@ List<Chapter> chapters = [
     nameArabic: "الجن",
     nameComplex: "Al-Jinn",
     nameSimple: "Al-Jinn",
-    pages: [572,573,],
+    pages: [
+      572,
+      573,
+    ],
     revelationOrder: 40,
     translatedName: {
       "id": "Jin",
@@ -1253,7 +1469,10 @@ List<Chapter> chapters = [
     nameArabic: "المزمل",
     nameComplex: "Al-Muzzammil",
     nameSimple: "Al-Muzzammil",
-    pages: [574,575,],
+    pages: [
+      574,
+      575,
+    ],
     revelationOrder: 3,
     translatedName: {
       "id": "Orang yang Berselimut",
@@ -1270,7 +1489,10 @@ List<Chapter> chapters = [
     nameArabic: "المدثر",
     nameComplex: "Al-Muddaththir",
     nameSimple: "Al-Muddaththir",
-    pages: [575,577,],
+    pages: [
+      575,
+      577,
+    ],
     revelationOrder: 4,
     translatedName: {
       "id": "Orang yang Berkemul",
@@ -1287,7 +1509,10 @@ List<Chapter> chapters = [
     nameArabic: "القيامة",
     nameComplex: "Al-Qiyāmah",
     nameSimple: "Al-Qiyamah",
-    pages: [577,578,],
+    pages: [
+      577,
+      578,
+    ],
     revelationOrder: 31,
     translatedName: {
       "id": "Hari Berbangkit",
@@ -1304,7 +1529,10 @@ List<Chapter> chapters = [
     nameArabic: "الانسان",
     nameComplex: "Al-&#39;Insān",
     nameSimple: "Al-Insan",
-    pages: [578,580,],
+    pages: [
+      578,
+      580,
+    ],
     revelationOrder: 98,
     revelationPlace: ChapterRevelationPlace.madinah,
     translatedName: {
@@ -1322,7 +1550,10 @@ List<Chapter> chapters = [
     nameArabic: "المرسلات",
     nameComplex: "Al-Mursalāt",
     nameSimple: "Al-Mursalat",
-    pages: [580,581,],
+    pages: [
+      580,
+      581,
+    ],
     revelationOrder: 33,
     translatedName: {
       "id": "Malaikat-malaikan yang Diutus",
@@ -1339,7 +1570,10 @@ List<Chapter> chapters = [
     nameArabic: "النبإ",
     nameComplex: "An-Naba",
     nameSimple: "An-Naba",
-    pages: [582,583,],
+    pages: [
+      582,
+      583,
+    ],
     revelationOrder: 80,
     translatedName: {
       "id": "Berita Besar",
@@ -1356,7 +1590,10 @@ List<Chapter> chapters = [
     nameArabic: "النازعات",
     nameComplex: "An-Nāzi`āt",
     nameSimple: "An-Nazi&#39;at",
-    pages: [583,584,],
+    pages: [
+      583,
+      584,
+    ],
     revelationOrder: 81,
     translatedName: {
       "id": "Malaikat yang Mencabut",
@@ -1373,7 +1610,10 @@ List<Chapter> chapters = [
     nameArabic: "عبس",
     nameComplex: "`Abasa",
     nameSimple: "&#39;Abasa",
-    pages: [585,585,],
+    pages: [
+      585,
+      585,
+    ],
     revelationOrder: 24,
     translatedName: {
       "id": "Ia Bermuka Masam",
@@ -1390,7 +1630,10 @@ List<Chapter> chapters = [
     nameArabic: "التكوير",
     nameComplex: "At-Takwīr",
     nameSimple: "At-Takwir",
-    pages: [586,586,],
+    pages: [
+      586,
+      586,
+    ],
     revelationOrder: 7,
     translatedName: {
       "id": "Menggulung",
@@ -1407,7 +1650,10 @@ List<Chapter> chapters = [
     nameArabic: "الإنفطار",
     nameComplex: "Al-&#39;Infiţār",
     nameSimple: "Al-Infitar",
-    pages: [587,587,],
+    pages: [
+      587,
+      587,
+    ],
     revelationOrder: 82,
     translatedName: {
       "id": "Terbelah",
@@ -1424,7 +1670,10 @@ List<Chapter> chapters = [
     nameArabic: "المطففين",
     nameComplex: "Al-Muţaffifīn",
     nameSimple: "Al-Mutaffifin",
-    pages: [587,589,],
+    pages: [
+      587,
+      589,
+    ],
     revelationOrder: 86,
     translatedName: {
       "id": "Orang-orang Curang",
@@ -1441,7 +1690,10 @@ List<Chapter> chapters = [
     nameArabic: "الإنشقاق",
     nameComplex: "Al-&#39;Inshiqāq",
     nameSimple: "Al-Inshiqaq",
-    pages: [589,589,],
+    pages: [
+      589,
+      589,
+    ],
     revelationOrder: 83,
     translatedName: {
       "id": "Terbelah",
@@ -1458,7 +1710,10 @@ List<Chapter> chapters = [
     nameArabic: "البروج",
     nameComplex: "Al-Burūj",
     nameSimple: "Al-Buruj",
-    pages: [590,590,],
+    pages: [
+      590,
+      590,
+    ],
     revelationOrder: 27,
     translatedName: {
       "id": "Gugusan Bintang",
@@ -1475,7 +1730,10 @@ List<Chapter> chapters = [
     nameArabic: "الطارق",
     nameComplex: "Aţ-Ţāriq",
     nameSimple: "At-Tariq",
-    pages: [591,591,],
+    pages: [
+      591,
+      591,
+    ],
     revelationOrder: 36,
     translatedName: {
       "id": "Yang Datang di Malam Hari",
@@ -1492,7 +1750,10 @@ List<Chapter> chapters = [
     nameArabic: "الأعلى",
     nameComplex: "Al-&#39;A`lá",
     nameSimple: "Al-A&#39;la",
-    pages: [591,592,],
+    pages: [
+      591,
+      592,
+    ],
     revelationOrder: 8,
     translatedName: {
       "id": "Yang Paling Tinggi",
@@ -1509,7 +1770,10 @@ List<Chapter> chapters = [
     nameArabic: "الغاشية",
     nameComplex: "Al-Ghāshiyah",
     nameSimple: "Al-Ghashiyah",
-    pages: [592,592,],
+    pages: [
+      592,
+      592,
+    ],
     revelationOrder: 68,
     translatedName: {
       "id": "Hari Pembalasan",
@@ -1526,7 +1790,10 @@ List<Chapter> chapters = [
     nameArabic: "الفجر",
     nameComplex: "Al-Fajr",
     nameSimple: "Al-Fajr",
-    pages: [593,594,],
+    pages: [
+      593,
+      594,
+    ],
     revelationOrder: 10,
     translatedName: {
       "id": "Fajar",
@@ -1543,7 +1810,10 @@ List<Chapter> chapters = [
     nameArabic: "البلد",
     nameComplex: "Al-Balad",
     nameSimple: "Al-Balad",
-    pages: [594,594,],
+    pages: [
+      594,
+      594,
+    ],
     revelationOrder: 35,
     translatedName: {
       "id": "Negeri",
@@ -1560,7 +1830,10 @@ List<Chapter> chapters = [
     nameArabic: "الشمس",
     nameComplex: "Ash-Shams",
     nameSimple: "Ash-Shams",
-    pages: [595,595,],
+    pages: [
+      595,
+      595,
+    ],
     revelationOrder: 26,
     translatedName: {
       "id": "Matahari",
@@ -1577,7 +1850,10 @@ List<Chapter> chapters = [
     nameArabic: "الليل",
     nameComplex: "Al-Layl",
     nameSimple: "Al-Layl",
-    pages: [595,596,],
+    pages: [
+      595,
+      596,
+    ],
     revelationOrder: 9,
     translatedName: {
       "id": "Malam",
@@ -1594,7 +1870,10 @@ List<Chapter> chapters = [
     nameArabic: "الضحى",
     nameComplex: "Ađ-Đuĥaá",
     nameSimple: "Ad-Duhaa",
-    pages: [596,596,],
+    pages: [
+      596,
+      596,
+    ],
     revelationOrder: 11,
     translatedName: {
       "id": "Waktu Dhuha",
@@ -1611,7 +1890,10 @@ List<Chapter> chapters = [
     nameArabic: "الشرح",
     nameComplex: "Ash-Sharĥ",
     nameSimple: "Ash-Sharh",
-    pages: [596,596,],
+    pages: [
+      596,
+      596,
+    ],
     revelationOrder: 12,
     translatedName: {
       "id": "Melapangkan",
@@ -1628,7 +1910,10 @@ List<Chapter> chapters = [
     nameArabic: "التين",
     nameComplex: "At-Tīn",
     nameSimple: "At-Tin",
-    pages: [597,597,],
+    pages: [
+      597,
+      597,
+    ],
     revelationOrder: 28,
     translatedName: {
       "id": "Buah Tin",
@@ -1645,7 +1930,10 @@ List<Chapter> chapters = [
     nameArabic: "العلق",
     nameComplex: "Al-`Alaq",
     nameSimple: "Al-&#39;Alaq",
-    pages: [597,597,],
+    pages: [
+      597,
+      597,
+    ],
     revelationOrder: 1,
     translatedName: {
       "id": "Segumpal Darah",
@@ -1662,7 +1950,10 @@ List<Chapter> chapters = [
     nameArabic: "القدر",
     nameComplex: "Al-Qadr",
     nameSimple: "Al-Qadr",
-    pages: [598,598,],
+    pages: [
+      598,
+      598,
+    ],
     revelationOrder: 25,
     translatedName: {
       "id": "Kemuliaan",
@@ -1679,7 +1970,10 @@ List<Chapter> chapters = [
     nameArabic: "البينة",
     nameComplex: "Al-Bayyinah",
     nameSimple: "Al-Bayyinah",
-    pages: [598,599,],
+    pages: [
+      598,
+      599,
+    ],
     revelationOrder: 100,
     revelationPlace: ChapterRevelationPlace.madinah,
     translatedName: {
@@ -1697,7 +1991,10 @@ List<Chapter> chapters = [
     nameArabic: "الزلزلة",
     nameComplex: "Az-Zalzalah",
     nameSimple: "Az-Zalzalah",
-    pages: [599,599,],
+    pages: [
+      599,
+      599,
+    ],
     revelationOrder: 93,
     revelationPlace: ChapterRevelationPlace.madinah,
     translatedName: {
@@ -1715,7 +2012,10 @@ List<Chapter> chapters = [
     nameArabic: "العاديات",
     nameComplex: "Al-`Ādiyāt",
     nameSimple: "Al-&#39;Adiyat",
-    pages: [599,600,],
+    pages: [
+      599,
+      600,
+    ],
     revelationOrder: 14,
     translatedName: {
       "id": "Berlari Kencang",
@@ -1732,7 +2032,10 @@ List<Chapter> chapters = [
     nameArabic: "القارعة",
     nameComplex: "Al-Qāri`ah",
     nameSimple: "Al-Qari&#39;ah",
-    pages: [600,600,],
+    pages: [
+      600,
+      600,
+    ],
     revelationOrder: 30,
     translatedName: {
       "id": "Hari Kiamat",
@@ -1749,7 +2052,10 @@ List<Chapter> chapters = [
     nameArabic: "التكاثر",
     nameComplex: "At-Takāthur",
     nameSimple: "At-Takathur",
-    pages: [600,600,],
+    pages: [
+      600,
+      600,
+    ],
     revelationOrder: 16,
     translatedName: {
       "id": "Bermegah-megahan",
@@ -1766,7 +2072,10 @@ List<Chapter> chapters = [
     nameArabic: "العصر",
     nameComplex: "Al-`Aşr",
     nameSimple: "Al-&#39;Asr",
-    pages: [601,601,],
+    pages: [
+      601,
+      601,
+    ],
     revelationOrder: 13,
     translatedName: {
       "id": "Waktu Sore",
@@ -1783,7 +2092,10 @@ List<Chapter> chapters = [
     nameArabic: "الهمزة",
     nameComplex: "Al-Humazah",
     nameSimple: "Al-Humazah",
-    pages: [601,601,],
+    pages: [
+      601,
+      601,
+    ],
     revelationOrder: 32,
     translatedName: {
       "id": "Pengumpat",
@@ -1800,7 +2112,10 @@ List<Chapter> chapters = [
     nameArabic: "الفيل",
     nameComplex: "Al-Fīl",
     nameSimple: "Al-Fil",
-    pages: [601,601,],
+    pages: [
+      601,
+      601,
+    ],
     revelationOrder: 19,
     translatedName: {
       "id": "Gajah",
@@ -1817,7 +2132,10 @@ List<Chapter> chapters = [
     nameArabic: "قريش",
     nameComplex: "Quraysh",
     nameSimple: "Quraysh",
-    pages: [602,602,],
+    pages: [
+      602,
+      602,
+    ],
     revelationOrder: 29,
     translatedName: {
       "id": "Suku Quraisy",
@@ -1834,7 +2152,10 @@ List<Chapter> chapters = [
     nameArabic: "الماعون",
     nameComplex: "Al-Mā`ūn",
     nameSimple: "Al-Ma&#39;un",
-    pages: [602,602,],
+    pages: [
+      602,
+      602,
+    ],
     revelationOrder: 17,
     translatedName: {
       "id": "Barang yang Berguna",
@@ -1851,7 +2172,10 @@ List<Chapter> chapters = [
     nameArabic: "الكوثر",
     nameComplex: "Al-Kawthar",
     nameSimple: "Al-Kawthar",
-    pages: [602,602,],
+    pages: [
+      602,
+      602,
+    ],
     revelationOrder: 15,
     translatedName: {
       "id": "Nikmat Berlimpah",
@@ -1868,7 +2192,10 @@ List<Chapter> chapters = [
     nameArabic: "الكافرون",
     nameComplex: "Al-Kāfirūn",
     nameSimple: "Al-Kafirun",
-    pages: [603,603,],
+    pages: [
+      603,
+      603,
+    ],
     revelationOrder: 18,
     translatedName: {
       "id": "Orang-orang Kafir",
@@ -1885,7 +2212,10 @@ List<Chapter> chapters = [
     nameArabic: "النصر",
     nameComplex: "An-Naşr",
     nameSimple: "An-Nasr",
-    pages: [603,603,],
+    pages: [
+      603,
+      603,
+    ],
     revelationOrder: 114,
     revelationPlace: ChapterRevelationPlace.madinah,
     translatedName: {
@@ -1903,7 +2233,10 @@ List<Chapter> chapters = [
     nameArabic: "المسد",
     nameComplex: "Al-Masad",
     nameSimple: "Al-Masad",
-    pages: [603,603,],
+    pages: [
+      603,
+      603,
+    ],
     revelationOrder: 6,
     translatedName: {
       "id": "Gejolak Api (Sabut)",
@@ -1920,7 +2253,10 @@ List<Chapter> chapters = [
     nameArabic: "الإخلاص",
     nameComplex: "Al-&#39;Ikhlāş",
     nameSimple: "Al-Ikhlas",
-    pages: [604,604,],
+    pages: [
+      604,
+      604,
+    ],
     revelationOrder: 22,
     translatedName: {
       "id": "Ikhlash",
@@ -1937,7 +2273,10 @@ List<Chapter> chapters = [
     nameArabic: "الفلق",
     nameComplex: "Al-Falaq",
     nameSimple: "Al-Falaq",
-    pages: [604,604,],
+    pages: [
+      604,
+      604,
+    ],
     revelationOrder: 20,
     translatedName: {
       "id": "Waktu Shubuh",
@@ -1954,7 +2293,10 @@ List<Chapter> chapters = [
     nameArabic: "الناس",
     nameComplex: "An-Nās",
     nameSimple: "An-Nas",
-    pages: [604,604,],
+    pages: [
+      604,
+      604,
+    ],
     revelationOrder: 21,
     translatedName: {
       "id": "Umat Manusia",

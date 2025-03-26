@@ -127,8 +127,8 @@ void main(List<String> args) {
   final randomVerse = AlQuran.randomVerse();
   print("""
     RandomVerse
-    Verse: ${randomVerse?.verse.toJson()}
-    Trans: ${randomVerse?.translation.toJson()}
+    Verse: ${randomVerse.verse.toJson()}
+    Trans: ${randomVerse.translation.toJson()}
   """);
 
   final randomVerseWithMode = AlQuran.randomVerse(
@@ -137,8 +137,8 @@ void main(List<String> args) {
   );
   print("""
     RandomVerseWithMode
-    Verse: ${randomVerseWithMode?.verse.toJson()}
-    Trans: ${randomVerseWithMode?.translation.toJson()}
+    Verse: ${randomVerseWithMode.verse.toJson()}
+    Trans: ${randomVerseWithMode.translation.toJson()}
   """);
 
   final searchResult = AlQuran.search(
@@ -150,5 +150,17 @@ void main(List<String> args) {
     SearchResult
     Chapters: ${searchResult.chapters}
     Verses: ${searchResult.verses}
+  """);
+
+  final versesByJuz = AlQuran.versesByJuz(1);
+  print("""
+    VersesByJuz
+    Verses: ${versesByJuz.length}
+  """);
+
+  final versesByChapter = AlQuran.versesByChapter(1);
+  print("""
+    VersesByChapter
+    Verses: ${versesByChapter.length}
   """);
 }

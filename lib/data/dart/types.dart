@@ -25,8 +25,7 @@ abstract class Verse with _$Verse {
     @Default(0) int juzNumber,
   }) = _Verse;
 
-  factory Verse.fromJson(Map<String, dynamic> json) =>
-      _$VerseFromJson(json);
+  factory Verse.fromJson(Map<String, dynamic> json) => _$VerseFromJson(json);
 }
 
 @freezed
@@ -57,7 +56,8 @@ abstract class Chapter with _$Chapter {
     @Default("") String nameSimple,
     @Default([]) List<int> pages,
     @Default(0) int revelationOrder,
-    @Default(ChapterRevelationPlace.makkah) ChapterRevelationPlace revelationPlace,
+    @Default(ChapterRevelationPlace.makkah)
+    ChapterRevelationPlace revelationPlace,
     @Default({}) ChapterTranslatedName translatedName,
     @Default(0) int versesCount,
   }) = _Chapter;
@@ -89,8 +89,7 @@ abstract class Juz with _$Juz {
     @Default(0) int number,
   }) = _Juz;
 
-  factory Juz.fromJson(Map<String, dynamic> json) =>
-      _$JuzFromJson(json);
+  factory Juz.fromJson(Map<String, dynamic> json) => _$JuzFromJson(json);
 }
 
 @freezed

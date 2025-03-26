@@ -7,3 +7,8 @@
 * Fix analysis
 * Random Verse
 * Search Chapters or Verses
+
+## 0.0.3
+
+* Verse by Juz or Chapter
+* Enable throw an error

@@ -18,3 +18,9 @@ fix.apply:
 
 analyze:
 	dart analyze
+
+format:
+	dart format .
+
+check:
+	dart format . && dart analyze && dart fix --dry-run

@@ -31,64 +31,27 @@ bool isVerseOutOfRange(int value) {
 
 /// Convert number to arabic number
 String toArabicNumber(int number) {
-  switch (number) {
-    case 1:
-      return "١";
-    case 2:
-      return "٢";
-    case 3:
-      return "٣";
-    case 4:
-      return "٤";
-    case 5:
-      return "٥";
-    case 6:
-      return "٦";
-    case 7:
-      return "٧";
-    case 8:
-      return "٨";
-    case 9:
-      return "٩";
-    case 0:
-      return "٠";
-    default:
-      return "";
-  }
+  return ['۰', '۱', '۲', '۳', '٤', '۵', '٦', '۷', '٨', '۹'][number];
 }
 
 /// Get the verses by verse mode
 List<Verse> getVerses({VerseMode mode = VerseMode.indopak}) {
-  List<Verse> verses;
-  switch (mode) {
-    case VerseMode.indopak:
-      verses = versesIndopak;
-      break;
-    case VerseMode.uthmani:
-      verses = versesUthmani;
-      break;
-    case VerseMode.uthmaniTajweed:
-      verses = versesUthmaniTajweed;
-      break;
-    case VerseMode.imlaei:
-      verses = versesImlaei;
-      break;
-  }
-
-  return verses;
+  return {
+    VerseMode.indopak: versesIndopak,
+    VerseMode.uthmani: versesUthmani,
+    VerseMode.uthmaniTajweed: versesUthmaniTajweed,
+    VerseMode.imlaei: versesImlaei,
+  }[mode]!;
 }
 
 /// Get the translations by type
 List<VerseTranslation> getTranslations(
     {TranslationType type = TranslationType.enMASAbdelHaleem}) {
-  switch (type) {
-    case TranslationType.enMASAbdelHaleem:
-      return enMASAbdelHaleem;
-    case TranslationType.idIndonesianIslamicAffairsMinistry:
-      return idIndonesianIslamicAffairsMinistry;
-    case TranslationType.frMontadaIslamicFoundation:
-      return frMontadaIslamicFoundation;
-    case TranslationType.trDarAlSalamCenter:
-      return trDarAlSalamCenter;
-  }
+  return {
+    TranslationType.enMASAbdelHaleem: enMASAbdelHaleem,
+    TranslationType.idIndonesianIslamicAffairsMinistry:
+        idIndonesianIslamicAffairsMinistry,
+    TranslationType.frMontadaIslamicFoundation: frMontadaIslamicFoundation,
+    TranslationType.trDarAlSalamCenter: trDarAlSalamCenter,
+  }[type]!;
 }

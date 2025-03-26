@@ -1,6 +1,6 @@
 name: alfurqan
 description: "Al Quran verses, translations, juzs and chapters. Offline."
-version: 0.0.2
+version: 0.0.3
 homepage: https://github.com/ariefsn/alquran-dart
 
 environment:

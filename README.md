@@ -1,10 +1,10 @@
-# Al Quran
+# Al Furqan
 
 > Al Quran verses, translations, juzs and chapters. Offline 🎉.
 
 ## Features
 
-- Offline 🚀. Use it locally, not need to fetch from internet. Source from [Quran Foundation](https://quran.foundation).
+- Offline 🚀. Use it locally, not need to fetch from internet.
 - Multiple verse text mode available
   - indopak
   - uthmani
@@ -20,6 +20,7 @@
 - Generate URL for Audio and Image. Based on [Islamic Network](https://islamic.network).
 - Generate Random Verse
 - Search Chapters or Verses
+- Verses by Juz or Chapter
 
 ## Install
 
@@ -160,6 +161,24 @@
   //   pageNumber: 1,
   //   juzNumber: 1,
   // )
+
+  // By Juz
+  final versesByJuz = AlQuran.versesByJuz(1);
+  print("""
+    VersesByJuz
+    Verses: ${versesByJuz.length}
+  """);
+  //  VersesByJuz
+  //  Verses: 148
+
+  // By Chapter
+  final versesByChapter = AlQuran.versesByChapter(1);
+  print("""
+    VersesByChapter
+    Verses: ${versesByChapter.length}
+  """);
+  //  VersesByChapter
+  //  Verses: 7
   ```
 
 - Translation

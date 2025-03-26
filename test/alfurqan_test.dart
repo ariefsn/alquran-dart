@@ -32,52 +32,48 @@ void main() {
 
     test('> Get Arabic Number', () {
       var res = AlQuran.arabicNumber(123);
-      expect(res, '١٢٣');
+      expect(res, '۱۲۳');
 
       res = AlQuran.arabicNumber(512);
-      expect(res, '٥١٢');
+      expect(res, '۵۱۲');
 
       res = AlQuran.arabicNumber(2048);
-      expect(res, '٢٠٤٨');
+      expect(res, '۲۰٤٨');
     });
   });
 
   group('AlQuran > JUZ', () {
     test('> Get', () {
       final res = AlQuran.juz(114, 1);
-      expect(res, isNotNull);
-      expect(res?.number, 30);
-      expect(res?.verse.count, 564);
+      expect(res.number, 30);
+      expect(res.verse.count, 564);
     });
   });
 
   group('AlQuran > CHAPTER', () {
     test('> Get', () {
       final res = AlQuran.chapter(114);
-      expect(res, isNotNull);
-      expect(res?.nameSimple, 'An-Nas');
-      expect(res?.translatedName["id"], "Umat Manusia");
-      expect(res?.versesCount, 6);
+      expect(res.nameSimple, 'An-Nas');
+      expect(res.translatedName["id"], "Umat Manusia");
+      expect(res.versesCount, 6);
     });
   });
 
   group('AlQuran > VERSE', () {
     test('> Get', () {
       final res = AlQuran.verse(1, 2);
-      expect(res, isNotNull);
-      expect(res?.chapterID, 1);
-      expect(res?.verseKey, '1:2');
-      expect(res?.juzNumber, 1);
+      expect(res.chapterID, 1);
+      expect(res.verseKey, '1:2');
+      expect(res.juzNumber, 1);
     });
 
     test('> Get Translation', () {
       final res = AlQuran.translation(
           TranslationType.idIndonesianIslamicAffairsMinistry, '1:2');
-      expect(res, isNotNull);
-      expect(res?.verseKey, '1:2');
-      expect(res?.text, 'Segala puji bagi Allah, Tuhan seluruh alam,');
-      expect(res?.resourceID, 33);
-      expect(res?.languageName, 'indonesian');
+      expect(res.verseKey, '1:2');
+      expect(res.text, 'Segala puji bagi Allah, Tuhan seluruh alam,');
+      expect(res.resourceID, 33);
+      expect(res.languageName, 'indonesian');
     });
   });
 }

@@ -4,7 +4,6 @@ import 'package:alfurqan/constant.dart';
 import 'package:alfurqan/data/dart/chapter.dart';
 import 'package:alfurqan/data/dart/juz.dart';
 import 'package:alfurqan/data/dart/types.dart';
-import 'package:alfurqan/data/dart/verses/indopak.dart';
 import 'package:alfurqan/data/dart/verses/uthmani.dart';
 import 'package:alfurqan/helper.dart';
 import 'package:collection/collection.dart';
@@ -47,7 +46,7 @@ class AlQuran {
   static int get totalChapter => chapters.length;
 
   /// Get the total verse
-  static int get totalVerse => versesIndopak.length;
+  static int get totalVerse => versesUthmani.length;
 
   /// Get the total madani surah
   static int get totalMadaniSurah {
@@ -66,59 +65,97 @@ class AlQuran {
   /// Get the juz by chapter number and verse number
   /// <br>If the chapter number or verse number is out of range, it will return null
   /// <br>The return is a Juz object
-  static Juz? juz(int chapterNumber, int verseNumber) {
-    if (isChapterOutOfRange(chapterNumber) || isVerseOutOfRange(verseNumber)) {
-      return null;
+  static Juz juz(int chapterNumber, int verseNumber) {
+    if (isChapterOutOfRange(chapterNumber)) {
+      throw Exception(ErrorMessages.chapterNumberOutOfRange);
     }
 
-    final verse = versesIndopak.firstWhereOrNull((e) {
+    if (isVerseOutOfRange(verseNumber)) {
+      throw Exception(ErrorMessages.verseNumberOutOfRange);
+    }
+
+    final verse = versesUthmani.firstWhereOrNull((e) {
       return e.verseKey == "$chapterNumber:$verseNumber";
     });
 
     if (verse == null) {
-      return null;
+      throw Exception(ErrorMessages.chapterNumberAndVerseNumberInvalid);
     }
 
-    return juzs.firstWhereOrNull((e) => e.number == verse.juzNumber);
+    return juzs.firstWhere((e) => e.number == verse.juzNumber);
   }
 
   /// Get the chapter by chapter number
   /// <br>If the chapter number is out of range, it will return null
   /// <br>The return is a Chapter object
-  static Chapter? chapter(int chapterNumber) {
+  static Chapter chapter(int chapterNumber) {
     if (isChapterOutOfRange(chapterNumber)) {
-      return null;
+      throw Exception(ErrorMessages.chapterNumberOutOfRange);
     }
 
-    return chapters.firstWhereOrNull((e) => e.id == chapterNumber);
+    return chapters.firstWhere((e) => e.id == chapterNumber);
   }
 
   /// Get the verse by chapter number and verse number
   /// <br>If the chapter number or verse number is out of range, it will return null
   /// <br>Support to change verse mode
   /// <br>The return is a Verse object
-  static Verse? verse(
+  static Verse verse(
     int chapterNumber,
     int verseNumber, {
     VerseMode mode = VerseMode.indopak,
   }) {
-    if (isChapterOutOfRange(chapterNumber) || isVerseOutOfRange(verseNumber)) {
-      return null;
+    if (isChapterOutOfRange(chapterNumber)) {
+      throw Exception(ErrorMessages.chapterNumberOutOfRange);
+    }
+
+    if (isVerseOutOfRange(verseNumber)) {
+      throw Exception(ErrorMessages.verseNumberOutOfRange);
     }
 
     final verses = getVerses(mode: mode);
 
     return verses
-        .firstWhereOrNull((e) => e.verseKey == "$chapterNumber:$verseNumber");
+        .firstWhere((e) => e.verseKey == "$chapterNumber:$verseNumber");
+  }
+
+  /// Get the verses by juz number
+  /// <br>Will return a list of Verse
+  static List<Verse> versesByJuz(int juzNumber,
+      {VerseMode mode = VerseMode.indopak}) {
+    if (isJuzOutOfRange(juzNumber)) {
+      throw Exception(ErrorMessages.juzNumberOutOfRange);
+    }
+
+    final selectedVerses = getVerses(mode: mode);
+    return selectedVerses.where((e) => e.juzNumber == juzNumber).toList();
+  }
+
+  /// Get the verses by chapter number
+  /// <br>Will return a list of Verse
+  static List<Verse> versesByChapter(int chapterNumber,
+      {VerseMode mode = VerseMode.indopak}) {
+    if (isChapterOutOfRange(chapterNumber)) {
+      throw Exception(ErrorMessages.chapterNumberOutOfRange);
+    }
+
+    final selectedVerses = getVerses(mode: mode);
+    return selectedVerses.where((e) => e.chapterID == chapterNumber).toList();
   }
 
   /// Get the translation by type and verse key
   /// <br>If the type or verse key is not exists, it will return null
   /// <br>The return is a VerseTranslation object
-  static VerseTranslation? translation(TranslationType type, String verseKey) {
+  static VerseTranslation translation(TranslationType type, String verseKey) {
     final translations = getTranslations(type: type);
+    final transFound =
+        translations.firstWhereOrNull((e) => e.verseKey == verseKey);
 
-    return translations.firstWhereOrNull((e) => e.verseKey == verseKey);
+    if (transFound == null) {
+      throw Exception(ErrorMessages.verseKeyInvalid);
+    }
+
+    return transFound;
   }
 
   /// Get the arabic number
@@ -138,7 +175,7 @@ class AlQuran {
   static String audioURLByChapter(int chapterNumber,
       {AudioEdition edition = AudioEdition.ar_alafasy}) {
     if (isChapterOutOfRange(chapterNumber)) {
-      return "";
+      throw Exception(ErrorMessages.chapterNumberOutOfRange);
     }
 
     final editionParsed = edition.name.toString().replaceAll("_", ".");
@@ -153,7 +190,7 @@ class AlQuran {
   static String audioURLByVerse(int verseNumber,
       {AudioEdition edition = AudioEdition.ar_alafasy}) {
     if (isVerseOutOfRange(verseNumber)) {
-      return "";
+      throw Exception(ErrorMessages.verseNumberOutOfRange);
     }
 
     final editionParsed = edition.name.toString().replaceAll("_", ".");
@@ -176,7 +213,7 @@ class AlQuran {
   /// Get a random verse
   /// <br>The return is a VerseComplete object
   /// <br>Support to change verse mode
-  static VerseComplete? randomVerse({
+  static VerseComplete randomVerse({
     VerseMode mode = VerseMode.indopak,
     TranslationType translationType = TranslationType.enMASAbdelHaleem,
   }) {
@@ -188,9 +225,6 @@ class AlQuran {
       return randomVerse(mode: mode, translationType: translationType);
     }
     final trans = translation(translationType, verse.verseKey);
-    if (trans == null) {
-      return randomVerse(mode: mode, translationType: translationType);
-    }
 
     return VerseComplete(verse, trans);
   }
