@@ -91,7 +91,7 @@
 - Juz
 
   ```dart
-  final juz = AlQuran.getJuz(1, 1);
+  final juz = AlQuran.juz(chapterNumber: 1, verseNumber: 1);
   print(juz);
   // Juz(
   //   verse: JuzVerse(
@@ -111,7 +111,7 @@
 - Chapter
 
   ```dart
-  final chapter = AlQuran.getChapter(1);
+  final chapter = AlQuran.chapter(1);
   print(chapter);
   // Chapter(
   //   id: 1,
@@ -136,7 +136,7 @@
 - Verse
 
   ```dart
-  final verse = AlQuran.getVerse(1, 1);
+  final verse = AlQuran.verse(1, 1);
   print(verse);
   // Verse(
   //   id: 1,
@@ -148,7 +148,7 @@
   // );
 
   // With Mode. Available indopak, uthmani, uthmani tajweed, and imlaei.
-  final verseWithMode = AlQuran.getVerse(
+  final verseWithMode = AlQuran.verse(
     1,
     1,
     mode: VerseMode.uthmani,
@@ -185,7 +185,7 @@
 - Translation
 
   ```dart
-  final translation = AlQuran.getTranslation(
+  final translation = AlQuran.translation(
       TranslationType.idIndonesianIslamicAffairsMinistry, "1:1");
   print(translation);
   // VerseTranslation(
@@ -200,11 +200,11 @@
 - Chapter Audio URL
 
   ```dart
-  final chapterAudio = AlQuran.getAudioURLByChapter(1);
+  final chapterAudio = AlQuran.audioURLByChapter(1);
   print(chapterAudio); // https://cdn.islamic.network/quran/audio-surah/128/ar.alafasy/1.mp3
 
   // With Edition
-  final chapterAudioWithEdition = AlQuran.getAudioURLByChapter(
+  final chapterAudioWithEdition = AlQuran.audioURLByChapter(
     1,
     edition: AudioEdition.ar_husary,
   );
@@ -214,11 +214,11 @@
 - Verse Audio URL
 
   ```dart
-  final verseAudio = AlQuran.getAudioURLByVerse(1);
+  final verseAudio = AlQuran.audioURLByVerse(1);
   print(verseAudio); // https://cdn.islamic.network/quran/audio/128/ar.alafasy/1.mp3
 
   // With Edition
-  final verseAudioWithEdition = AlQuran.getAudioURLByVerse(1,
+  final verseAudioWithEdition = AlQuran.audioURLByVerse(1,
       edition: AudioEdition.ar_husary);
   print(verseAudioWithEdition); // https://cdn.islamic.network/quran/audio/128/ar.husary/1.mp3
   ```
@@ -226,11 +226,11 @@
 - Verse Image URL
 
   ```dart
-  final imageUrl = AlQuran.getImageURLByVerse("1:1");
+  final imageUrl = AlQuran.imageURLByVerse("1:1");
   print(imageUrl); // https://cdn.islamic.network/quran/images/1_1.png
 
   // With high quality
-  final imageUrlHighQuality = AlQuran.getImageURLByVerse("1:1", highQuality: true);
+  final imageUrlHighQuality = AlQuran.imageURLByVerse("1:1", highQuality: true);
   print(imageUrlHighQuality); // https://cdn.islamic.network/quran/images/high-resolution/1_1.png
   ```
 
