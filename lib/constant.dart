@@ -116,6 +116,10 @@ enum AudioEdition {
 
 /// An error message
 class ErrorMessages {
+  /// Error for Juz chapter verse is required
+  static String juzChapterVerseIsRequired =
+      "Please fill juz number or chapter number or verse number.";
+
   /// Error for Juz number out of range
   static String juzNumberOutOfRange = "Juz number out of range";
 

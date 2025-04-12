@@ -20,7 +20,7 @@ void main(List<String> args) {
   final totalVerse = AlQuran.totalVerse;
   print(totalVerse); // 6236
 
-  final juz = AlQuran.juz(1, 1);
+  final juz = AlQuran.juz(chapterNumber: 1, verseNumber: 1);
   print(juz);
   // Juz(
   //   verse: JuzVerse(
@@ -162,5 +162,11 @@ void main(List<String> args) {
   print("""
     VersesByChapter
     Verses: ${versesByChapter.length}
+  """);
+
+  final transliteration = AlQuran.transliteration("1:1");
+  print("""
+    Transliteration
+    Transliteration: $transliteration
   """);
 }

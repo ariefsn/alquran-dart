@@ -44,7 +44,7 @@ void main() {
 
   group('AlQuran > JUZ', () {
     test('> Get', () {
-      final res = AlQuran.juz(114, 1);
+      final res = AlQuran.juz(chapterNumber: 114, verseNumber: 1);
       expect(res.number, 30);
       expect(res.verse.count, 564);
     });

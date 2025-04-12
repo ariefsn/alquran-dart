@@ -12,3 +12,8 @@
 
 * Verse by Juz or Chapter
 * Enable throw an error
+
+## 0.0.4
+
+* Verse Transliteration
+* Juz parameters updated

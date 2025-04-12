@@ -798,7 +798,7 @@ class _$ChapterCopyWithImpl<$Res> implements $ChapterCopyWith<$Res> {
           : revelationPlace // ignore: cast_nullable_to_non_nullable
               as ChapterRevelationPlace,
       translatedName: null == translatedName
-          ? _self.translatedName
+          ? _self.translatedName!
           : translatedName // ignore: cast_nullable_to_non_nullable
               as Map<String, String>,
       versesCount: null == versesCount
@@ -1097,7 +1097,7 @@ class _$JuzVerseCopyWithImpl<$Res> implements $JuzVerseCopyWith<$Res> {
           : count // ignore: cast_nullable_to_non_nullable
               as int,
       items: null == items
-          ? _self.items
+          ? _self.items!
           : items // ignore: cast_nullable_to_non_nullable
               as Map<String, String>,
     ));
@@ -1698,6 +1698,167 @@ class __$TranslationCopyWithImpl<$Res> implements _$TranslationCopyWith<$Res> {
     return $TranslatedNameCopyWith<$Res>(_self.verse, (value) {
       return _then(_self.copyWith(verse: value));
     });
+  }
+}
+
+/// @nodoc
+mixin _$Transliteration {
+  String get id;
+  String get text;
+
+  /// Create a copy of Transliteration
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $TransliterationCopyWith<Transliteration> get copyWith =>
+      _$TransliterationCopyWithImpl<Transliteration>(
+          this as Transliteration, _$identity);
+
+  /// Serializes this Transliteration to a JSON map.
+  Map<String, dynamic> toJson();
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is Transliteration &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.text, text) || other.text == text));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, id, text);
+
+  @override
+  String toString() {
+    return 'Transliteration(id: $id, text: $text)';
+  }
+}
+
+/// @nodoc
+abstract mixin class $TransliterationCopyWith<$Res> {
+  factory $TransliterationCopyWith(
+          Transliteration value, $Res Function(Transliteration) _then) =
+      _$TransliterationCopyWithImpl;
+  @useResult
+  $Res call({String id, String text});
+}
+
+/// @nodoc
+class _$TransliterationCopyWithImpl<$Res>
+    implements $TransliterationCopyWith<$Res> {
+  _$TransliterationCopyWithImpl(this._self, this._then);
+
+  final Transliteration _self;
+  final $Res Function(Transliteration) _then;
+
+  /// Create a copy of Transliteration
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+    Object? text = null,
+  }) {
+    return _then(_self.copyWith(
+      id: null == id
+          ? _self.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      text: null == text
+          ? _self.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _Transliteration implements Transliteration {
+  _Transliteration({this.id = "", this.text = ""});
+  factory _Transliteration.fromJson(Map<String, dynamic> json) =>
+      _$TransliterationFromJson(json);
+
+  @override
+  @JsonKey()
+  final String id;
+  @override
+  @JsonKey()
+  final String text;
+
+  /// Create a copy of Transliteration
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$TransliterationCopyWith<_Transliteration> get copyWith =>
+      __$TransliterationCopyWithImpl<_Transliteration>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$TransliterationToJson(
+      this,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _Transliteration &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.text, text) || other.text == text));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, id, text);
+
+  @override
+  String toString() {
+    return 'Transliteration(id: $id, text: $text)';
+  }
+}
+
+/// @nodoc
+abstract mixin class _$TransliterationCopyWith<$Res>
+    implements $TransliterationCopyWith<$Res> {
+  factory _$TransliterationCopyWith(
+          _Transliteration value, $Res Function(_Transliteration) _then) =
+      __$TransliterationCopyWithImpl;
+  @override
+  @useResult
+  $Res call({String id, String text});
+}
+
+/// @nodoc
+class __$TransliterationCopyWithImpl<$Res>
+    implements _$TransliterationCopyWith<$Res> {
+  __$TransliterationCopyWithImpl(this._self, this._then);
+
+  final _Transliteration _self;
+  final $Res Function(_Transliteration) _then;
+
+  /// Create a copy of Transliteration
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? id = null,
+    Object? text = null,
+  }) {
+    return _then(_Transliteration(
+      id: null == id
+          ? _self.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      text: null == text
+          ? _self.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
   }
 }
 

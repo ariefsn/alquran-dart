@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:alfurqan/constant.dart';
 import 'package:alfurqan/data/dart/chapter.dart';
 import 'package:alfurqan/data/dart/juz.dart';
+import 'package:alfurqan/data/dart/transliteration.dart';
 import 'package:alfurqan/data/dart/types.dart';
 import 'package:alfurqan/data/dart/verses/uthmani.dart';
 import 'package:alfurqan/helper.dart';
@@ -62,10 +63,23 @@ class AlQuran {
         .length;
   }
 
-  /// Get the juz by chapter number and verse number
-  /// <br>If the chapter number or verse number is out of range, it will return null
+  /// Get the juz by juz number, chapter number and verse number
+  /// <br>If the juz number is valid, the other parameters will be ignored
+  /// <br>If the juz number, chapter number or verse number is out of range, it will throw an exception
   /// <br>The return is a Juz object
-  static Juz juz(int chapterNumber, int verseNumber) {
+  static Juz juz(
+      {int chapterNumber = 0, int verseNumber = 0, int juzNumber = 0}) {
+    if (juzNumber < 1 && chapterNumber < 1 && verseNumber < 1) {
+      throw Exception(ErrorMessages.juzChapterVerseIsRequired);
+    }
+
+    if (juzNumber > 0) {
+      if (isJuzOutOfRange(juzNumber)) {
+        throw Exception(ErrorMessages.juzNumberOutOfRange);
+      }
+      return juzs.firstWhere((e) => e.number == juzNumber);
+    }
+
     if (isChapterOutOfRange(chapterNumber)) {
       throw Exception(ErrorMessages.chapterNumberOutOfRange);
     }
@@ -86,7 +100,7 @@ class AlQuran {
   }
 
   /// Get the chapter by chapter number
-  /// <br>If the chapter number is out of range, it will return null
+  /// <br>If the chapter number is out of range, it will throw an exception
   /// <br>The return is a Chapter object
   static Chapter chapter(int chapterNumber) {
     if (isChapterOutOfRange(chapterNumber)) {
@@ -97,7 +111,7 @@ class AlQuran {
   }
 
   /// Get the verse by chapter number and verse number
-  /// <br>If the chapter number or verse number is out of range, it will return null
+  /// <br>If the chapter number or verse number is out of range, it will throw an exception
   /// <br>Support to change verse mode
   /// <br>The return is a Verse object
   static Verse verse(
@@ -144,12 +158,26 @@ class AlQuran {
   }
 
   /// Get the translation by type and verse key
-  /// <br>If the type or verse key is not exists, it will return null
+  /// <br>If the type or verse key is not exists, it will throw an exception
   /// <br>The return is a VerseTranslation object
   static VerseTranslation translation(TranslationType type, String verseKey) {
     final translations = getTranslations(type: type);
     final transFound =
         translations.firstWhereOrNull((e) => e.verseKey == verseKey);
+
+    if (transFound == null) {
+      throw Exception(ErrorMessages.verseKeyInvalid);
+    }
+
+    return transFound;
+  }
+
+  /// Get the transliteration by verse key
+  /// <br>If the verse key is not exists, it will throw an exception
+  /// <br>The return is a Transliteration object
+  static Transliteration transliteration(String verseKey) {
+    final transFound =
+        transliterations.firstWhereOrNull((e) => e.id == verseKey);
 
     if (transFound == null) {
       throw Exception(ErrorMessages.verseKeyInvalid);

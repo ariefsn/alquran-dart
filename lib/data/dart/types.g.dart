@@ -143,3 +143,15 @@ Map<String, dynamic> _$TranslationToJson(_Translation instance) =>
       'slug': instance.slug,
       'languageName': instance.languageName,
     };
+
+_Transliteration _$TransliterationFromJson(Map<String, dynamic> json) =>
+    _Transliteration(
+      id: json['id'] as String? ?? "",
+      text: json['text'] as String? ?? "",
+    );
+
+Map<String, dynamic> _$TransliterationToJson(_Transliteration instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'text': instance.text,
+    };

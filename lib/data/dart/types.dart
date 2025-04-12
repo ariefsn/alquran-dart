@@ -107,3 +107,14 @@ abstract class Translation with _$Translation {
   factory Translation.fromJson(Map<String, dynamic> json) =>
       _$TranslationFromJson(json);
 }
+
+@freezed
+abstract class Transliteration with _$Transliteration {
+  factory Transliteration({
+    @Default("") String id,
+    @Default("") String text,
+  }) = _Transliteration;
+
+  factory Transliteration.fromJson(Map<String, dynamic> json) =>
+      _$TransliterationFromJson(json);
+}

@@ -1,6 +1,6 @@
 # Al Furqan
 
-> Al Quran verses, translations, juzs and chapters. Offline 🎉.
+> Al Quran verses, translations, transliterations, juzs and chapters. Offline 🎉.
 
 ## Features
 
@@ -21,6 +21,7 @@
 - Generate Random Verse
 - Search Chapters or Verses
 - Verses by Juz or Chapter
+- Transliteration
 
 ## Install
 
@@ -291,7 +292,7 @@
 
   ```dart
   final searchResult = AlQuran.search(
-    'annas',
+    'yasin',
     TranslationType.idIndonesianIslamicAffairsMinistry,
   );
 
@@ -323,4 +324,17 @@
   //    )
   //  ]
   //  Verses: []
+  ```
+
+- Transliteration
+
+  ```dart
+  final transliteration = AlQuran.transliteration("1:1");
+  print("""
+    Transliteration
+    Transliteration: $transliteration
+  """);
+
+  //  Transliteration
+  //  Transliteration: Transliteration(id: 1:1, text: Bismi Allāhi Ar-Raĥmāni Ar-Raĥīmi)
   ```
